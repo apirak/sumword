@@ -1,11 +1,7 @@
 filename = "words"
 
 def wordcount(word)
-  sum = 0
-  word.chomp.split(//).each do |char|
-    sum += (char.ord - 96)
-  end
-  return sum
+  word.chomp.split(//).sum { |char| char.ord - 96 }
 end
 
 count = 0
